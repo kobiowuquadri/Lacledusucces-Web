@@ -44,7 +44,7 @@ if (mysqli_query($conn, $sql)) {
     </html>";
 
     $headers = "From: admin@lacledusucces.org\r\n";
-    $headers .= "Reply-To: admin@lacledusucces.org\r\n";
+    $headers .= "Reply-To:  $email\r\n";
     $headers .= "Content-Type: text/html\r\n";
 
     if (mail($to, $subject, $message, $headers)) {

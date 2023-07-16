@@ -29,13 +29,7 @@
   <body autocomplete="off">
     <div class="preloader">
       <div class="lds-ripple">
-        <div></div>
-
-        <div></div>
-
-        <div></div>
-
-        <div></div>
+        <img src="../../assets1/images/favicon.jpg" alt="">
       </div>
     </div>
 
@@ -218,6 +212,7 @@
             name="name"
             required=""
             type="text"
+            placeholder="Enter your fullname"
           />
         </div>
 
@@ -236,13 +231,10 @@
             class="form-control"
             id="phoneNumber"
             name="phoneNumber"
-            pattern="[0-9]{10}"
+            pattern="[0-9]{20}"
             required=""
             type="tel"
           />
-          <small class="form-text text-muted"
-            >Please enter a 10-digit phone number.</small
-          >
         </div>
 
         <div class="form-group">
@@ -264,6 +256,7 @@
             name="email"
             required=""
             type="email"
+            placeholder="example@gmail.com"
           />
         </div>
 
@@ -430,6 +423,38 @@
     </div>
 
     <div class="go-top"></div>
+    <script>
+      // Form validation
+      (function () {
+        'use strict';
+    
+        // Fetch the form element
+        var form = document.getElementById('registrationForm');
+    
+        // Prevent submission and handle validation
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+    
+          if (form.checkValidity()) {
+            // Submit the form
+            form.submit();
+          }
+    
+          form.classList.add('was-validated');
+        });
+      })();
+    
+      // Show success alert
+      document.getElementById('registrationForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        // You can add your email sending logic here
+    
+        // Show the success alert
+        $('#successModal').modal('show');
+      });
+    </script>
+    
     <script src="../../assets1/js/jquery.min.js"></script>
     <script src="../../assets1/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets1/js/appear.min.js"></script>

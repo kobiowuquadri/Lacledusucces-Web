@@ -579,8 +579,8 @@ img {
     background: #fff;
     -webkit-box-shadow: 0 0 30px rgba(44, 178, 179, .1);
     box-shadow: 0 0 30px rgba(44, 178, 179, .1);
-    padding: 20px 35px;
-    max-width: 315px;
+    padding: 10px;
+    max-width: 300px;
     position: absolute;
     left: 0;
     right: 0;
